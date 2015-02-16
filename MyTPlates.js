@@ -1,6 +1,6 @@
 
 
-this.TPEngine = function() {
+var TPEngine = function() {
     var mdl={};
     var kompiler = function(templateString, model) {
         var rgx = /~>{([^:]+)?:}/g, 
