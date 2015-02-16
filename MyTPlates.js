@@ -6,8 +6,8 @@ var TPEngine = function() {
         var rgx = /~>{([^:]+)?:}/g, 
         rgex = /(^( )?(if|for|else|switch|case|break|{|}))(.*)?/g, 
         segment = 'var r=[];\n', position = 0, 
-        kompile = function(chunk, ixjs) {
-            ixjs ? (segment += chunk.match(rgex) ? chunk + '\n' : 'r.push(' + chunk + ');\n') : 
+        kompile = function(chunk, ixCd) {
+            ixCd ? (segment += chunk.match(rgex) ? chunk + '\n' : 'r.push(' + chunk + ');\n') : 
             (segment += chunk != '' ? 'r.push("' + chunk.replace(/"/g, '\\"') + '");\n' : '');
             return kompile;
         };
