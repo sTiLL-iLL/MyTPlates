@@ -1,8 +1,5 @@
 
 
-
-
-
 this.TPEngine = function() {
     var mdl={};
     var kompiler = function(templateString, model) {
